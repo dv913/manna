@@ -106,14 +106,14 @@ genrand()
 }
 
 /* this main() outputs first 1000 generated numbers  */
-main()
+/* main()
 { 
     int j;
 
-    sgenrand(4357); /* any nonzero integer can be used as a seed */
+    sgenrand(4357); 
     for (j=0; j<1000; j++) {
         printf("%10.8f ", genrand());
         if (j%8==7) printf("\n");
     }
     printf("\n");
-}
+} */
