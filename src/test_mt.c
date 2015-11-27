@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <time.h>
+#include <math.h>
+#include <stdlib.h>
+
+#include<mt.h>
+
+#include "mt19937ar_clean_bkp.h"
+
+#define RUNS 10000000UL 
+
+
+int main() {
+int hist[10]={0};
+int check=0;
+
+srand(time(NULL));
+sgenrand(time(NULL));
+int counter;
+
+for(counter=0; counter<RUNS; counter++) {
+  int test_num = rand();
+   //check++;
+  //printf("\n%i: ", test_num);
+  int dec =1;
+    while(test_num>99){
+    
+    int digit = test_num%10;
+    //printf("%i, ", digit);
+    test_num/=10;
+    hist[digit]++;
+    dec++;
+    
+    }
+   check++;
+    if(dec<9){hist[0]=hist[0]-(9-dec)*0;}
+  }
+
+
+int i;
+for(i=0;i<11; i++) {printf("\nhist[%i]: %i", i, hist[i]);}
+
+printf("\nCHECK: %i\n", check);
+printf("\nMAX: %i\n", RAND_MAX);
+
+}
