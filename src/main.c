@@ -239,7 +239,7 @@ for (drop = 0; drop < N_ROLLS; drop++) {  // big droppping cycle
 
 long long int size=0;
 
-#if (1)
+#if (0)
 
 #define PUSH(a) stack[stack_used++]=(a)
 #define POP(a)  (a)=stack[--stack_used]
@@ -297,7 +297,7 @@ for(y_pos = 0; y_pos < depth ; y_pos++)  {
 }/* end of while(stack_used != 0) look */
 #endif
 
-#if (0)
+#if (1)
 {
 int npos;
 
